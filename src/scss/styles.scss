@@ -1,0 +1,26 @@
+@import 'reset.scss';
+@import 'mixins.scss';
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    cursor: pointer;
+}
+
+
+
+.container {
+
+    @include COLUMN;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    @import 'header.scss';
+    @import 'banner.scss';
+    @import 'specials.scss';
+    @import 'footer.scss';
+
+}

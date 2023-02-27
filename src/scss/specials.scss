@@ -1,0 +1,381 @@
+    //------------------Specials & Bonuses--------------------
+
+    .special-offer {
+
+
+        width: 100%;
+        max-width: 1920px;
+        display: grid;
+        grid-template-rows: 1.2fr, 3fr, 5fr;
+        background: #EFEFEF;
+
+
+        &__header {
+            width: 80%;
+            margin: 69px auto 16px;
+            max-width: 1110px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .slider-container {
+            width: 100%;
+            max-width: 1230px;
+            margin: 0 auto;
+        }
+
+        .slider-btn {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: transparent;
+
+            &:active {
+                width: 35px;
+                height: 35px;
+                transition: all ease 0.3s;
+            }
+        }
+
+        .left {
+            margin-right: 10px;
+            transform: rotate(45deg);
+            border: none;
+            border-bottom: 4px solid #66C05D;
+            border-left: 4px solid #66C05D;
+
+            &:active {
+                margin-right: 15.5px;
+            }
+        }
+
+        .right {
+            margin-left: 10px;
+            transform: rotate(45deg);
+            border: none;
+            border-top: 4px solid #66C05D;
+            border-right: 4px solid #66C05D;
+
+            &:active {
+                margin-left: 15.5px;
+            }
+        }
+
+        &__cards {
+            width: 1110px;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+
+
+        }
+
+        &__list {
+            margin-left: 430px;
+            padding-left: 15px;
+            padding-right: 150px;
+            display: flex;
+            column-gap: 30px;
+            font-size: 16px;
+            transition: all ease 0.3s;
+        }
+
+        &__listEl {
+            height: 363px;
+            width: 255px !important;
+            @include COLUMN();
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+
+
+            h5 {
+                display: inline-block;
+                margin: 20px auto 20px;
+                font-weight: 400;
+                text-align: center;
+                color: #333333;
+            }
+
+            img {
+                margin-top: 25px;
+                width: 125px;
+                height: 166px;
+            }
+
+            span {
+                font-size: 21px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            button {
+                @include smallBTN;
+                border: 2px solid #66C05D;
+                margin-bottom: 25px;
+                @include toWhiteHover();
+
+                &:hover {
+                    border: 2px solid #66C05D;
+                }
+            }
+        }
+
+        // bonus&location
+
+        .bonus-section {
+            display: flex;
+            column-gap: 30px;
+            margin-top: 100px;
+            margin-bottom: 135px;
+            color: #f5f5f5;
+
+        }
+
+        .first-block {
+            @include COLUMN;
+            align-items: flex-start;
+            width: 250px;
+            height: 100%;
+            margin-left: 10%;
+        }
+
+        h6 {
+            display: inline-block;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .bonus {
+            @include greenRectangle;
+            display: flex;
+            justify-content: space-between;
+
+
+            input {
+                margin-bottom: 33px;
+                margin-top: 25px;
+                padding: 9px 25px;
+                height: 40px;
+                width: 225px;
+                border-radius: 30px;
+                border: none;
+                outline: none;
+
+                &:focus {
+                    background: #f5f5f5;
+                }
+            }
+
+            img {
+                margin-right: 45px;
+                height: 106px;
+                width: 140px;
+            }
+        }
+
+        .shop-locations {
+            @include greenRectangle;
+            @include COLUMN;
+            align-items: flex-start;
+            align-items: left;
+
+            button {
+                @include smallBTN;
+                border: 2px solid #fff;
+                margin-bottom: 35px;
+                margin-top: 25px;
+                @include toWhiteHover()
+            }
+
+            h6 {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media screen and (max-width:1201px) {
+        .special-offer {
+            width: 100%;
+
+            .slider-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+
+            &__list {
+                margin-left: 290px;
+            }
+
+            &__cards {
+                margin-left: 15%;
+                width: 574px;
+
+            }
+
+            .right {
+                margin: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        .special-offer {
+            &__cards {
+                margin-left: 120px;
+            }
+
+            &__list {
+                margin-left: 400px;
+            }
+
+            .bonus-section {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width:824px) {
+        .special-offer {
+            &__cards {
+                margin-left: 45px;
+            }
+
+            &__list {
+                margin-left: 400px;
+            }
+        }
+
+    }
+
+    @media screen and (max-width:770px) {
+        .special-offer {
+
+            &__cards {
+                margin: 0 auto;
+                margin-left: 10px;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 30px;
+            }
+
+            .bonus-section {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                margin-top: 100px;
+                margin-bottom: 135px;
+
+
+            }
+
+            .slider-container {
+                width: 90%;
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+    @media screen and (max-width:482px) {
+        .special-offer {
+            width: 100%;
+
+            &__header {
+                margin-left: 50px;
+                display: flex;
+                flex-direction: column-reverse;
+                width: 80%;
+            }
+
+
+            .bonus-section {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .bonus,
+            .shop-locations {
+
+                flex-direction: column;
+                align-items: flex-start;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            &__cards {
+
+                width: 83.3%;
+            }
+
+            .slider-container {
+                display: flex;
+                justify-content: flex-start;
+                width: 350px;
+                margin-left: 5.3%;
+            }
+
+            .slider-btn {
+                transform: rotate(43deg);
+                width: 45px;
+                height: 30x;
+            }
+
+            &__list {
+                margin-left: 1260px;
+            }
+        }
+
+    }
+
+    @media screen and (max-width:380px) {
+        .special-offer {
+
+            &__header {
+                margin-left: 38px;
+                width: 320px;
+                display: flex;
+                row-gap: 30px;
+                flex-direction: column-reverse;
+            }
+
+            .slider-container {
+                display: flex;
+                justify-content: flex-start;
+                width: 320px;
+                margin-left: 28px;
+            }
+
+            .slider-btn {
+                width: 25px;
+                height: 25px;
+            }
+
+            .bonus-section {
+                width: 70%;
+                margin: 30px 15px;
+
+            }
+
+            .bonus,
+            .shop-locations {
+                width: 320px;
+                margin-left: 15px;
+            }
+        }
+    }

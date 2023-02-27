@@ -1,0 +1,98 @@
+    //------------------Banner--------------------
+
+    .banner {
+        background-image: url(../assets/imgs/chair-banner.png);
+        background-position: -209px;
+        width: 100%;
+        max-width: 1920px;
+        height: 604px;
+        color: #f5f5f5;
+
+
+        &__container {
+            @include COLUMN;
+            justify-content: center;
+            align-items: flex-start;
+            width: 308px;
+            height: 100%;
+            margin-left: 205px;
+            row-gap: 50px;
+
+            @media screen and (max-width:1201px) {
+                margin-left: 20px;
+            }
+
+            @media screen and (max-width:821px) {
+                margin-left: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 48px;
+            }
+
+            button {
+                @include BTN;
+                border: 2px solid #f5f5f5;
+                color: #f5f5f5;
+
+                &:hover {
+                    background-color: #f5f5f5;
+                    color: #66C05D;
+                    transition: all ease 0.5s;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1201px) {
+        .banner {
+            width: 100%;
+            height: 480px;
+            background-size: cover;
+            background-position: -200px 0;
+        }
+    }
+
+    @media screen and (max-width:821px) {
+        .banner {
+            height: 480px;
+            background-size: cover;
+            background-position: -350px 0;
+
+            .container {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width:482px) {
+        .banner {
+            height: 280px;
+            background-size: cover;
+            background-position: -240px 0;
+
+
+            &__container {
+                align-items: flex-start;
+                width: 60%;
+                color: #333;
+                row-gap: 20px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
